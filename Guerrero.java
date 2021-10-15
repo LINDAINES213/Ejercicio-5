@@ -12,14 +12,18 @@ public class Guerrero extends Combatientes {
     Combatientes guerrero = new Combatientes();
     Item itemG = new Item();
 
-    public String[] infoGuerrero(){
-        String [] infoguerrero = new String[5];
-        
+    public Guerrero(){
+
         guerrero.setNombre("Guerrero");
         guerrero.setVidas(100);
         guerrero.setAtaque(30);
         itemG.setNomItem("Super Golpe");
         itemG.setNumItem(12);
+    }
+
+
+    public String[] infoGuerrero(){
+        String [] infoguerrero = new String[5];
             
         infoguerrero[0] = "Nombre: " +guerrero.getNombre();
         infoguerrero[1] = "Vidas: " +Integer.toString(guerrero.getVidas());
@@ -29,5 +33,7 @@ public class Guerrero extends Combatientes {
         System.out.println("Jugador 1: " +Arrays.toString(infoguerrero));
         return infoguerrero;
     }
+
+
 
 }

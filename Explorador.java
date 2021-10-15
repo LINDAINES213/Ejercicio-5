@@ -17,10 +17,10 @@ public class Explorador extends Combatientes {
         String [] infoexplorador = new String[5];
         
         explorador.setNombre("Explorador");
-        explorador.setVidas(100);
-        explorador.setAtaque(30);
+        explorador.setVidas(80);
+        explorador.setAtaque(22);
         itemE.setNomItem("Rayo Electrico");
-        itemE.setNumItem(20);
+        itemE.setNumItem(45);
 
         infoexplorador[0] = "Nombre: " +explorador.getNombre();
         infoexplorador[1] = "Vidas: " +Integer.toString(explorador.getVidas());
@@ -29,6 +29,7 @@ public class Explorador extends Combatientes {
         infoexplorador[4] = "Fuerza de Ataque del Item: " +Integer.toString(itemE.getNumIten());
         System.out.println("\nJugador 2: " +Arrays.toString(infoexplorador));
         return infoexplorador;
+        
     }
 
 }

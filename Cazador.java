@@ -21,8 +21,8 @@ public class Cazador extends Combatientes {
         String [] infoCazador = new String[5];
         
         cazador.setNombre("Cazador");
-        cazador.setVidas(100);
-        cazador.setAtaque(30);
+        cazador.setVidas(95);
+        cazador.setAtaque(40);
         mascotas.setNombre("Perro");
         mascotas.setAtaque(15);
         mascotas.setVidas(cazador.getVidas());

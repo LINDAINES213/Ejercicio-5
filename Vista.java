@@ -10,6 +10,7 @@ public class Vista {
     
     //Objeto tipo scanner
     Scanner sn = new Scanner(System.in);
+    //Vista vista = new Vista();
     //Objeto tipo enemigo
     //Enemigos enemigos = new Enemigos();
     //Objeto tipo jefe
@@ -19,6 +20,8 @@ public class Vista {
     //Objeto tipo explorador
     Explorador exploradores = new Explorador();
     Cazador cazadores = new Cazador();
+    Enemigos enemigos = new Enemigos();
+    Jefe jefes = new Jefe();
     /**
      * Texto del primer menu
     */
@@ -40,17 +43,39 @@ public class Vista {
     /**
      * Texto del tercer menu
     */
-    public int menuateque(){
+    public int menuataque(){
         int opcion3;
-
-        String menu3 = "1. Atacar\n" +
-                       "2. Recuperar Vida\n";
+        String menuataque = "1. Ataque Normal\n" +
+                            "2. Usar Item (Jugador)\n" +
+                            "3. Usar Habilidad Especial(Enemigo o Jefe)\n";
         
-        System.out.println(menu3);
-        opcion3 =  sn.nextInt();
-               
-        return opcion3;
+        System.out.println(menuataque);
+        opcion3 =  sn.nextInt();  
+        return opcion3; 
+    }
 
+    public int AtaqueAEnemigo(){
+
+        int opcion4;
+        String menuataque = "A quien desea atacar?\n" +
+                            "1. Jefe\n" +
+                            "2. Mago y Gigante de Hielo\n";
+
+        System.out.println(menuataque);
+        opcion4 =  sn.nextInt();  
+        return opcion4;
+    }
+
+    public int AtaqueAJugador(){
+
+        int opcion5;
+        String menuataque = "Como desea atacar?\n" +
+                            "1. Ataque normal\n" +
+                            "2. Ataque con Habilidad especial\n";
+
+        System.out.println(menuataque);
+        opcion5 =  sn.nextInt();  
+        return opcion5;
     }
 
     /**
@@ -65,7 +90,6 @@ public class Vista {
         
         System.out.println(personaje);
         opcion2 = sn.nextInt();
-
         return opcion2;
     }
 
@@ -78,7 +102,9 @@ public class Vista {
         exploradores.infoExplorador();
         cazadores.infoCazador();
         System.out.println("\nLista de Enemigos: \n");
-
+        enemigos.infoMago();
+        enemigos.infoGiganteHielo();
+        jefes.infoJefe();
     }
 
     /**
@@ -89,5 +115,4 @@ public class Vista {
         System.out.println(salir);
         return salir;
     }
-
 }

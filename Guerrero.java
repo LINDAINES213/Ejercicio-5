@@ -13,7 +13,6 @@ public class Guerrero extends Combatientes {
     Item itemG = new Item();
 
     public Guerrero(){
-
         guerrero.setNombre("Guerrero");
         guerrero.setVidas(100);
         guerrero.setAtaque(30);
@@ -34,6 +33,6 @@ public class Guerrero extends Combatientes {
         return infoguerrero;
     }
 
-
+    
 
 }

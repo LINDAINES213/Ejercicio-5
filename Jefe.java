@@ -34,4 +34,6 @@ public class Jefe extends Combatientes {
         System.out.println("\nJefe: " +Arrays.toString(infojefe));
         return infojefe;
     }
+
+    
 }

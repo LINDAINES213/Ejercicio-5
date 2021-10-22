@@ -18,6 +18,7 @@ public class Guerrero extends Combatientes {
         guerrero.setAtaque(30);
         itemG.setNomItem("Super Golpe");
         itemG.setNumItem(12);
+        return;
     }
 
 
@@ -32,6 +33,19 @@ public class Guerrero extends Combatientes {
         System.out.println("Jugador 1: " +Arrays.toString(infoguerrero));
         return infoguerrero;
     }
+
+    public int atacar(){
+		int danoT = 0;
+		danoT = this.ataque;
+		return danoT;
+	}
+
+	public void recibirataque(int danor){
+		this.vidas = this.vidas - danor;
+		if(this.vidas <= 0){
+			this.estado = "Derrotado";
+		}
+	}
 
     
 

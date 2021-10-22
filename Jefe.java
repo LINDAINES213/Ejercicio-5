@@ -12,9 +12,9 @@ public class Jefe extends Combatientes {
         jefe.setNombre("Jefe");
         jefe.setVidas(150);
         jefe.setAtaque(55);
-        habilidadespecialJ1.setNomItem("Rayo Electrico");
+        habilidadespecialJ1.setNomItem("Hacha Gigante");
         habilidadespecialJ1.setNumItem(40);
-        habilidadespecialJ2.setNomItem("Rayo Electrico");
+        habilidadespecialJ2.setNomItem("Cañon");
         habilidadespecialJ2.setNumItem(30);
 
     }
@@ -34,6 +34,19 @@ public class Jefe extends Combatientes {
         System.out.println("\nJefe: " +Arrays.toString(infojefe));
         return infojefe;
     }
+
+    public int atacar(){
+		int danoT = 0;
+		danoT = this.ataque;
+		return danoT;
+	}
+
+	public void recibirataque(int danor){
+		this.vidas = this.vidas - danor;
+		if(this.vidas <= 0){
+			this.estado = "Derrotado";
+		}
+	}
 
     
 }

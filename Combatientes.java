@@ -10,15 +10,6 @@ public class Combatientes {
     protected String nombre;
     protected int ataque;
 	protected String estado = "En Combate";
-	protected int dano;
-
-	public Combatientes(){
-		nombre = "";
-		vidas = 0;
-		ataque = 0;
-		dano = 0;
-
-	}
 
 	public void setNombre (String nombre){
 		this.nombre = nombre;
@@ -48,15 +39,5 @@ public class Combatientes {
 		return estado;
 	}
 
-	public int atacar(){
-		dano = this.ataque;
-		return dano;
-	}
-
-	public void recibirataque(int danor){
-		this.vidas -= danor;
-		if(this.vidas <= 0){
-			this.estado = "Derrotado";
-		}
-	}
+	
 }
